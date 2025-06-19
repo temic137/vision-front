@@ -1,69 +1,59 @@
-<div class="max-w-5xl mx-auto p-4 md:p-8 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-3xl shadow-2xl my-8 border border-gray-100 dark:border-gray-800">
-  <!-- Header Section with modern design -->
-  <div class="text-center mb-12 relative overflow-hidden rounded-2xl">
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-indigo-500/20 to-purple-500/20 dark:from-blue-900/30 dark:via-indigo-900/30 dark:to-purple-900/30 backdrop-blur-sm"></div>
-    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-    <div class="relative z-10 py-10 px-6">
-      <div class="inline-flex items-center justify-center p-2 bg-white/90 dark:bg-black/40 backdrop-blur-md rounded-2xl shadow-lg mb-4 border border-white/30 dark:border-gray-800/60">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mr-2" viewBox="0 0 24 24" fill="none" stroke="url(#eye-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <defs>
-            <linearGradient id="eye-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#3b82f6" />
-              <stop offset="100%" stop-color="#8b5cf6" />
-            </linearGradient>
-          </defs>
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-          <circle cx="12" cy="12" r="3"></circle>
+<div class="max-w-5xl mx-auto p-4 md:p-8 bg-white dark:bg-black rounded-lg shadow-md my-8 border border-gray-200 dark:border-gray-800">
+  <!-- Header Section - Minimalist -->
+  <div class="text-center mb-10">
+    <div class="inline-flex items-center justify-center p-2 bg-white dark:bg-black rounded-lg mb-4 border border-gray-200 dark:border-gray-800">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+      <h1 class="text-3xl font-bold text-black dark:text-white">Vision Assistant</h1>
+    </div>
+    <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">Real-time image description for accessibility</p>
+    <div class="mt-3 flex justify-center">
+      <a href="/test-upload" class="flex items-center gap-2 bg-white dark:bg-black py-2 px-5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 2v7.31"></path>
+          <path d="M14 9.3V2"></path>
+          <path d="M8.5 2h7"></path>
+          <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
         </svg>
-        <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-500 dark:from-blue-400 dark:via-indigo-500 dark:to-purple-400 text-transparent bg-clip-text">Vision Assistant</h1>
-      </div>
-      <p class="text-gray-700 dark:text-gray-300 font-light text-xl max-w-2xl mx-auto mb-6">Real-time image description for accessibility powered by AI</p>
-      <div class="mt-3 flex justify-center">
-        <a href="/test-upload" class="group flex items-center gap-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm py-2 px-5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 dark:text-blue-400 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10 2v7.31"></path>
-            <path d="M14 9.3V2"></path>
-            <path d="M8.5 2h7"></path>
-            <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
-          </svg>
-          <span class="text-gray-800 dark:text-gray-200 font-medium">Test Upload Tool</span>
-        </a>
-      </div>
+        <span class="text-gray-800 dark:text-gray-200">Test Upload Tool</span>
+      </a>
     </div>
   </div>
 
-  <!-- Mode Selection with glass effect -->
-  <div class="flex justify-center mb-10 gap-4 flex-wrap">
+  <!-- Mode Selection - Minimalist -->
+  <div class="flex justify-center mb-8 gap-4 flex-wrap">
     <button
-      class="group px-6 py-4 backdrop-blur-md rounded-2xl cursor-pointer transition-all duration-300 flex items-center justify-center min-w-44 shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl"
-      [ngClass]="{'bg-gradient-to-br from-blue-500 to-indigo-600 text-white border-transparent': !isCameraMode, 'bg-white/90 dark:bg-gray-900/90 text-gray-800 dark:text-gray-200': isCameraMode}"
+      class="px-6 py-4 rounded-md cursor-pointer transition-all duration-300 flex items-center justify-center min-w-44 border"
+      [ngClass]="{'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white': !isCameraMode, 'bg-white dark:bg-black text-black dark:text-white border-gray-300 dark:border-gray-700': isCameraMode}"
       (click)="isCameraMode && toggleCameraMode()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" [ngClass]="{'stroke-white': !isCameraMode, 'stroke-blue-500 dark:stroke-blue-400': isCameraMode}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
         <line x1="12" y1="18" x2="12" y2="12"></line>
         <line x1="9" y1="15" x2="15" y2="15"></line>
       </svg>
-      <span class="font-medium text-lg">Upload Image</span>
+      <span class="font-medium">Upload Image</span>
     </button>
     <button
-      class="group px-6 py-4 backdrop-blur-md rounded-2xl cursor-pointer transition-all duration-300 flex items-center justify-center min-w-44 shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl"
-      [ngClass]="{'bg-gradient-to-br from-blue-500 to-indigo-600 text-white border-transparent': isCameraMode, 'bg-white/90 dark:bg-gray-900/90 text-gray-800 dark:text-gray-200': !isCameraMode}"
+      class="px-6 py-4 rounded-md cursor-pointer transition-all duration-300 flex items-center justify-center min-w-44 border"
+      [ngClass]="{'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white': isCameraMode, 'bg-white dark:bg-black text-black dark:text-white border-gray-300 dark:border-gray-700': !isCameraMode}"
       (click)="!isCameraMode && toggleCameraMode()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" [ngClass]="{'stroke-white': isCameraMode, 'stroke-blue-500 dark:stroke-blue-400': !isCameraMode}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
         <circle cx="12" cy="13" r="4"></circle>
       </svg>
-      <span class="font-medium text-lg">Camera Mode</span>
+      <span class="font-medium">Camera Mode</span>
     </button>
   </div>
 
-  <!-- Description Mode Selection with modern tabs -->
-  <div class="mb-10 bg-white/50 dark:bg-gray-900/50 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+  <!-- Description Mode Selection - Minimalist -->
+  <div class="mb-8 bg-white dark:bg-black p-6 rounded-md border border-gray-200 dark:border-gray-800">
     <div class="flex items-center mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="4" y1="21" x2="4" y2="14"></line>
         <line x1="4" y1="10" x2="4" y2="3"></line>
         <line x1="12" y1="21" x2="12" y2="12"></line>
@@ -76,66 +66,60 @@
       </svg>
       <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">Description Mode</h3>
     </div>
-    <div class="flex flex-wrap gap-3 justify-center p-2 bg-gray-100/70 dark:bg-gray-800/70 rounded-xl">
+    <div class="flex flex-wrap gap-3 justify-center p-2 bg-gray-100 dark:bg-gray-900 rounded-md">
       <button
-        class="relative px-5 py-3 text-sm rounded-xl cursor-pointer transition-all duration-300 flex items-center justify-center min-w-32 z-10 overflow-hidden"
-        [ngClass]="{'text-white font-medium': descriptionMode === 'detailed', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'detailed'}"
+        class="relative px-5 py-3 text-sm rounded-md cursor-pointer transition-all duration-300 flex items-center justify-center min-w-32"
+        [ngClass]="{'bg-black text-white dark:bg-white dark:text-black': descriptionMode === 'detailed', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'detailed'}"
         (click)="descriptionMode !== 'detailed' && toggleDescriptionMode()"
       >
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl transition-opacity duration-300"
-             [ngClass]="{'opacity-100': descriptionMode === 'detailed', 'opacity-0': descriptionMode !== 'detailed'}"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
           <polyline points="14 2 14 8 20 8"></polyline>
           <line x1="16" y1="13" x2="8" y2="13"></line>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        <span class="relative z-10">Detailed</span>
+        <span>Detailed</span>
       </button>
       <button
-        class="relative px-5 py-3 text-sm rounded-xl cursor-pointer transition-all duration-300 flex items-center justify-center min-w-32 z-10 overflow-hidden"
-        [ngClass]="{'text-white font-medium': descriptionMode === 'quick', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'quick'}"
+        class="relative px-5 py-3 text-sm rounded-md cursor-pointer transition-all duration-300 flex items-center justify-center min-w-32"
+        [ngClass]="{'bg-black text-white dark:bg-white dark:text-black': descriptionMode === 'quick', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'quick'}"
         (click)="descriptionMode !== 'quick' && toggleDescriptionMode()"
       >
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl transition-opacity duration-300"
-             [ngClass]="{'opacity-100': descriptionMode === 'quick', 'opacity-0': descriptionMode !== 'quick'}"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2z"></path>
           <path d="M14.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path>
           <path d="M7.5 10.5h4"></path>
           <path d="M7.5 14h1"></path>
         </svg>
-        <span class="relative z-10">Quick</span>
+        <span>Quick</span>
       </button>
       <button
-        class="relative px-5 py-3 text-sm rounded-xl cursor-pointer transition-all duration-300 flex items-center justify-center min-w-40 z-10 overflow-hidden"
-        [ngClass]="{'text-white font-medium': descriptionMode === 'camera', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'camera'}"
+        class="relative px-5 py-3 text-sm rounded-md cursor-pointer transition-all duration-300 flex items-center justify-center min-w-40"
+        [ngClass]="{'bg-black text-white dark:bg-white dark:text-black': descriptionMode === 'camera', 'text-gray-700 dark:text-gray-300': descriptionMode !== 'camera'}"
         (click)="descriptionMode !== 'camera' && toggleDescriptionMode()"
       >
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl transition-opacity duration-300"
-             [ngClass]="{'opacity-100': descriptionMode === 'camera', 'opacity-0': descriptionMode !== 'camera'}"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="5" r="3"></circle>
           <path d="M12 8v13"></path>
           <path d="M8 16l4-4 4 4"></path>
           <path d="M20 21v-8a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v8"></path>
         </svg>
-        <span class="relative z-10">Blind Assistant</span>
+        <span>Blind Assistant</span>
       </button>
     </div>
   </div>
 
-  <!-- Voice Command Status with modern alerts -->
+  <!-- Voice Command Status - Minimalist -->
   <div class="mb-8" aria-live="polite">
     <div
-      class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-5 rounded-2xl flex items-center mb-4 border border-blue-100 dark:border-blue-800/30 shadow-lg backdrop-blur-sm"
+      class="bg-gray-100 dark:bg-gray-900 p-5 rounded-md flex items-center mb-4 border border-gray-200 dark:border-gray-800"
       *ngIf="isListening"
       role="status"
     >
       <div class="flex items-center">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center mr-3 shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white dark:text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
             <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
             <line x1="12" y1="19" x2="12" y2="23"></line>
@@ -145,19 +129,19 @@
         <div>
           <p class="text-gray-800 dark:text-gray-200 font-medium">Listening for commands</p>
           <div class="flex mt-1">
-            <span class="animate-pulse h-2 w-2 bg-blue-500 dark:bg-blue-400 rounded-full"></span>
-            <span class="animate-pulse h-2 w-2 bg-indigo-500 dark:bg-indigo-400 rounded-full mx-1 delay-100"></span>
-            <span class="animate-pulse h-2 w-2 bg-purple-500 dark:bg-purple-400 rounded-full delay-200"></span>
+            <span class="animate-pulse h-2 w-2 bg-black dark:bg-white rounded-full"></span>
+            <span class="animate-pulse h-2 w-2 bg-black dark:bg-white rounded-full mx-1 delay-100"></span>
+            <span class="animate-pulse h-2 w-2 bg-black dark:bg-white rounded-full delay-200"></span>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md p-5 rounded-2xl mb-2 border border-gray-200/50 dark:border-gray-700/50 shadow-md"
+      class="bg-white dark:bg-black p-5 rounded-md mb-2 border border-gray-200 dark:border-gray-800"
       *ngIf="isBlindAssistantMode && !voiceCommandResult && !voiceCommandError"
     >
       <div class="flex items-center">
-        <div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mr-3 shadow-md">
+        <div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center mr-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -166,110 +150,155 @@
         </div>
         <div>
           <p class="text-gray-800 dark:text-gray-200 font-medium mb-1">Voice Commands Available</p>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Say <span class="font-medium text-blue-600 dark:text-blue-400">"turn on/off camera"</span> or <span class="font-medium text-indigo-600 dark:text-indigo-400">"turn on/off blind assistant"</span> to control the application.</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Say <span class="font-medium">"turn on/off camera"</span> or <span class="font-medium">"turn on/off blind assistant"</span> to control the application.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Upload Mode with modern design -->
+  <!-- Upload Mode - Minimalist -->
   <div
-    class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl mb-10 border border-gray-200/50 dark:border-gray-700/50"
+    class="bg-white dark:bg-black p-8 rounded-md border border-gray-200 dark:border-gray-800 mb-8"
     *ngIf="!isCameraMode"
   >
     <div class="flex flex-col items-center gap-5 mb-8">
       <input type="file" id="imageInput" accept="image/*" (change)="onFileSelected($event)" class="hidden" />
       <label
         for="imageInput"
-        class="group flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-4 px-7 rounded-xl cursor-pointer transition-all duration-300 w-full max-w-xs shadow-lg"
+        class="flex items-center justify-center gap-3 bg-black dark:bg-white text-white dark:text-black py-4 px-7 rounded-md cursor-pointer transition-all duration-300 w-full max-w-xs"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
           <circle cx="8.5" cy="8.5" r="1.5"></circle>
           <polyline points="21 15 16 10 5 21"></polyline>
-          <line x1="14" y1="7" x2="14" y2="11"></line>
-          <line x1="12" y1="9" x2="16" y2="9"></line>
         </svg>
         <span class="font-medium text-lg">Choose an image</span>
       </label>
       <button
-        class="group flex items-center justify-center gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white py-4 px-7 rounded-xl cursor-pointer transition-all duration-300 w-full max-w-xs shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        class="flex items-center justify-center gap-3 bg-black dark:bg-white text-white dark:text-black py-4 px-7 rounded-md cursor-pointer transition-all duration-300 w-full max-w-xs disabled:opacity-50 disabled:cursor-not-allowed"
         (click)="onSubmit()"
         [disabled]="isLoading || !selectedFile"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
         </svg>
         <span class="font-medium text-lg">Describe Image</span>
       </button>
+      <button
+        class="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-3 px-6 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300"
+        (click)="resetForm()"
+        *ngIf="selectedFile"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 4v6h-6"></path>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+        <span>Reset</span>
+      </button>
     </div>
 
     <div
-      class="mt-8 bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50"
+      class="mt-8 bg-gray-100 dark:bg-gray-900 p-6 rounded-md border border-gray-200 dark:border-gray-800"
       *ngIf="imagePreview"
     >
       <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
           <circle cx="8.5" cy="8.5" r="1.5"></circle>
           <polyline points="21 15 16 10 5 21"></polyline>
         </svg>
         Image Preview
       </h3>
-      <div class="overflow-hidden rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+      <div class="overflow-hidden rounded-md border border-gray-200 dark:border-gray-800">
         <img [src]="imagePreview" alt="Preview" class="max-w-full h-auto w-full object-cover" />
       </div>
     </div>
   </div>
 
-  <!-- Results with modern design -->
+  <!-- Camera Mode - Minimalist -->
   <div
-    class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl mb-10 border border-gray-200/50 dark:border-gray-700/50"
+    class="bg-white dark:bg-black p-8 rounded-md border border-gray-200 dark:border-gray-800 mb-8"
+    *ngIf="isCameraMode"
+  >
+    <div class="flex flex-col items-center">
+      <div class="w-full max-w-2xl overflow-hidden rounded-md bg-black mb-6 relative border border-gray-200 dark:border-gray-800">
+        <video #videoElement autoplay playsinline class="w-full h-auto"></video>
+        <div class="absolute top-4 right-4 flex space-x-2">
+          <div class="animate-pulse w-3 h-3 bg-white rounded-full" *ngIf="isCameraActive"></div>
+          <div class="bg-black/40 px-2 py-1 rounded-full text-xs text-white flex items-center" *ngIf="isCameraActive">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+            </svg> Live
+          </div>
+        </div>
+      </div>
+      <canvas #canvasElement class="hidden"></canvas>
+
+      <div class="w-full max-w-xl flex flex-col items-center gap-5 mt-4">
+        <button
+          class="flex items-center justify-center gap-3 bg-black dark:bg-white text-white dark:text-black py-4 px-7 rounded-md cursor-pointer transition-all duration-300 w-full max-w-xs disabled:opacity-50 disabled:cursor-not-allowed"
+          (click)="captureImage()"
+          [disabled]="isLoading || !isCameraActive || processingImage"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <span class="font-medium text-lg">Capture & Describe</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results - Minimalist -->
+  <div
+    class="bg-white dark:bg-black p-8 rounded-md border border-gray-200 dark:border-gray-800 mb-8"
     *ngIf="descriptionResult && !isLoading"
   >
     <div class="flex items-center mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
-      <div class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center mr-4 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="w-12 h-12 rounded-full bg-black dark:bg-white flex items-center justify-center mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white dark:text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
         </svg>
       </div>
-      <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 text-transparent bg-clip-text">Image Description</h2>
+      <h2 class="text-2xl font-bold text-black dark:text-white">Image Description</h2>
     </div>
 
     <div
-      class="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-md p-6 rounded-xl mb-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg"
+      class="bg-gray-100 dark:bg-gray-900 p-6 rounded-md mb-8 border border-gray-200 dark:border-gray-800"
     >
-      <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg">{{ descriptionResult?.description || "Image description will appear here" }}</p>
+      <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg">{{ descriptionResult.description }}</p>
     </div>
 
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800/30 shadow-lg backdrop-blur-sm">
+    <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-md border border-gray-200 dark:border-gray-800">
       <div class="flex items-center mb-6">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center mr-4 shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-        </svg>
+        <div class="w-12 h-12 rounded-full bg-black dark:bg-white flex items-center justify-center mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white dark:text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
         </div>
-        <h3 class="text-xl font-bold bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 text-transparent bg-clip-text">Audio Narration</h3>
+        <h3 class="text-xl font-bold text-black dark:text-white">Audio Narration</h3>
       </div>
 
       <button
-        class="group flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 px-6 rounded-xl cursor-pointer transition-all duration-300 mb-6 shadow-lg"
+        class="flex items-center justify-center gap-3 bg-black dark:bg-white text-white dark:text-black py-3 px-6 rounded-md cursor-pointer transition-all duration-300 mb-6"
         (click)="playAudio()"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="5 3 19 12 5 21 5 3"></polygon>
         </svg>
         <span class="font-medium">Play Audio</span>
       </button>
 
-      <div class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-4 rounded-xl shadow-md border border-gray-200/50 dark:border-gray-700/50">
-        <audio controls *ngIf="descriptionResult?.audio" class="w-full max-w-md rounded">
-          <source [src]="'data:audio/mp3;base64,' + descriptionResult?.audio" type="audio/mp3">
+      <div class="bg-white dark:bg-black p-4 rounded-md border border-gray-200 dark:border-gray-800">
+        <audio controls *ngIf="descriptionResult.audio" class="w-full max-w-md rounded">
+          <source [src]="'data:audio/mp3;base64,' + descriptionResult.audio" type="audio/mp3">
           Your browser does not support the audio element.
         </audio>
       </div>
     </div>
   </div>
-</div> 
+</div>
