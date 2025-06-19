@@ -49,7 +49,7 @@ export type DescriptionMode = 'quick' | 'detailed' | 'camera';
   providedIn: 'root'
 })
 export class ImageDescriptionService {
-  private apiUrl = 'https://vision-back-bfbwfhgmfndmgaf3.canadacentral-01.azurewebsites.net'; // Flask backend URL
+  private apiUrl = 'vision-back-wqzvn.kinsta.app'; // Flask backend URL
   private cache: Map<string, ImageDescriptionResponse> = new Map();
 
   constructor(private http: HttpClient) { }
