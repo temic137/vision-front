@@ -298,7 +298,7 @@ export class TestUploadComponent {
     // Log the request details
     console.log(`Sending test image to backend: ${this.selectedFile.name}, size: ${this.selectedFile.size} bytes, type: ${this.selectedFile.type}`);
 
-    this.http.post('vision-back-wqzvn.kinsta.app/describe-image', formData)
+    this.http.post('https://vision-back-wqzvn.kinsta.app/describe-image', formData)
       .subscribe({
         next: (response: any) => {
           this.isLoading = false;
